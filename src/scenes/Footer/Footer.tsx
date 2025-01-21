@@ -85,7 +85,7 @@ const Footer = ({ setSelectedPage }: Props) => {
               Oven Cleaning
             </a>
           </div>
-          <div className="flex md:flex-col sm:flex-col sm:gap-3 justify-between text-nowrap flex-row gap-1">
+          <div className="flex md:flex-col sm:flex-col sm:gap-3 justify-between flex-row gap-1">
             <a
               className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
               href="#services"
@@ -173,12 +173,23 @@ const Footer = ({ setSelectedPage }: Props) => {
       </motion.div>
       {/* last part */}
       <div className="flex justify-between items-center mx-auto pt-3 sm:w-5/6">
-        <p className="text-gray-500 text-[10px] sm:text-sm">©️2025 WhizzyDigics. All Rights Reserved.</p>
+        <p className="text-gray-500 text-[10px] sm:text-sm">
+          ©️2025 WhizzyDigics. All Rights Reserved.
+        </p>
 
         <div className="flex gap-2 ">
-          <FontAwesomeIcon icon={faFacebook} className="text-white p-[2px] sm:p-1 md:p-1 text-sm sm:text-lg md:text-2xl md:rounded-full rounded-[100%] bg-blue-500" />
-          <FontAwesomeIcon icon={faTwitter} className="text-white p-[2px] sm:p-1 md:p-1 text-sm sm:text-lg md:text-2xl md:rounded-full rounded-[100%] bg-blue-500" />
-          <FontAwesomeIcon icon={faInstagram} className="text-white p-[2px] sm:p-1 md:p-1 text-sm sm:text-lg md:text-2xl md:rounded-full rounded-[100%] bg-blue-500" />
+          <FontAwesomeIcon
+            icon={faFacebook}
+            className="text-white p-[2px] sm:p-1 md:p-1 text-sm sm:text-lg md:text-2xl md:rounded-full rounded-[100%] bg-blue-500"
+          />
+          <FontAwesomeIcon
+            icon={faTwitter}
+            className="text-white p-[2px] sm:p-1 md:p-1 text-sm sm:text-lg md:text-2xl md:rounded-full rounded-[100%] bg-blue-500"
+          />
+          <FontAwesomeIcon
+            icon={faInstagram}
+            className="text-white p-[2px] sm:p-1 md:p-1 text-sm sm:text-lg md:text-2xl md:rounded-full rounded-[100%] bg-blue-500"
+          />
         </div>
       </div>
     </section>
