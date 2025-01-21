@@ -16,7 +16,7 @@ const Home = ({ setSelectedPage }: Props) => {
         className="md:flex mx-auto w-5/6 items-center justify-center md:h-5/6"
       >
         {/* MAIN HEADER */}
-        <div className="z-10 py-24 mt-12 md:basis-3/5">
+        <div className="z-10 py-12 md:py-24 md:mt-12 md:basis-3/5">
           {/* HEADINGS */}
           <motion.div
             initial="hidden"
@@ -30,13 +30,13 @@ const Home = ({ setSelectedPage }: Props) => {
             className=""
           >
             <div className="flex flex-col gap-4 justify-center items-center md:items-start">
-              <p className="text-md md:text-start text-blue-700 bg-blue-200 py-2 px-2 font-bold rounded-md">
+              <p className="text-sm md:text-md md:text-start text-blue-700 bg-blue-200 py-2 px-2 font-bold rounded-md">
                 Professional Cleaning Service Company
               </p>
-              <h2 className="text-3xl md:text-5xl font-bold">
+              <h2 className="text-4xl text-center md:text-5xl font-bold">
                 Trusted and Reliable <br /> Cleaning Services
               </h2>
-              <p className="mt-8 text-sm md:text-start">
+              <p className="mt-2 md:mt-8 text-md  md:text-sm text-center md:text-start">
                 Super Cleaners is a professional cleaning service in your local
                 area. We provide a range of services including house cleaning,
                 office cleaning, and more.
@@ -53,7 +53,7 @@ const Home = ({ setSelectedPage }: Props) => {
               hidden: { opacity: 0, x: -50 },
               visible: { opacity: 1, x: 0 },
             }}
-            className="mt-8 flex items-center gap-8 md:justify-start"
+            className="mt-8 flex items-center justify-center gap-8 md:justify-start"
           >
             <ActionButton setSelectedPage={setSelectedPage}>
               Contact Us

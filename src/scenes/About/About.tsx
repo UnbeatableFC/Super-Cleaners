@@ -16,10 +16,10 @@ const About = ({ setSelectedPage }: Props) => {
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.About)}
-        className="md:flex mx-auto px-auto w-5/6 gap-16 bg-primarybg-100 items-center justify-evenly"
+        className="flex md:flex-row flex-col mx-3 md:mx-auto md:px-auto  md:w-5/6 gap-16 bg-primarybg-100 items-center justify-evenly"
       >
         {/* Image */}
-        <div className="flex basis-2/5 w-2/3 justify-center items-center rounded-[40px] bg-white  px-12 mx-9 md:z-10 md:py-10">
+        <div className="md:flex hidden md:basis-2/5 md:w-2/3 justify-center items-center md:rounded-[40px] md:bg-white  md:px-12 md:mx-9 md:z-10 md:py-10">
           <img src={AboutPhoto} alt="" className='rounded-[40px]  h-[308px] w-full ' />
         </div>
 
@@ -42,10 +42,10 @@ const About = ({ setSelectedPage }: Props) => {
             provider dedicated to delivering top-notch cleaning solutions for
             both residential and commercial spaces. Our team of experienced
             professionals uses eco-friendly products and state-of-the-art
-            equipment to ensure your environment is spotless and healthy. We
+            equipment to ensure your environment is spotless and healthy.<span className="hidden md:inline"> We
             pride ourselves on our attention to detail, reliability, and
             exceptional customer service, making us the trusted choice for all
-            your cleaning needs.
+            your cleaning needs.</span>
           </p>
 
           <ul className="text-sm mb-1 justify-start items-start font-semibold">

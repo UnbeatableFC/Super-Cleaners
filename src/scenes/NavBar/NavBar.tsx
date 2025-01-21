@@ -16,7 +16,7 @@ const NavBar = ({ selectedPage, setSelectedPage, isTopPage }: Props) => {
   const flexBetween = "flex justify-between items-center";
   const [isMenuToggled, setIsMenuToggled] = useState<boolean>(false);
   const isAboveMediumScreens = useMediaQuery("(min-width:1060px)");
-  const navbarBackground = isTopPage ? "" : "bg-blue-20 drop-shadow";
+  const navbarBackground = isTopPage ? "bg-white" : "bg-blue-20 drop-shadow";
 
   return (
     <nav>
@@ -91,41 +91,44 @@ const NavBar = ({ selectedPage, setSelectedPage, isTopPage }: Props) => {
       {!isAboveMediumScreens && isMenuToggled && (
         <div className="fixed right-0 bottom-0 z-40 h-full w-[250px] bg-blue-300 drop-shadow-xl">
           <div className="flex justify-end p-12">
-            <button title='Close-Icon' onClick={() => setIsMenuToggled(!isMenuToggled)}>
+            <button
+              title="Close-Icon"
+              onClick={() => setIsMenuToggled(!isMenuToggled)}
+            >
               <XMarkIcon className="h-6 w-6 text-slate-700" />
             </button>
           </div>
 
           <div>
             <div className={`${flexBetween} flex-col gap-10 text-xl`}>
-            <Link
-                      page="About"
-                      selectedPage={selectedPage}
-                      setSelectedPage={setSelectedPage}
-                    />
+              <Link
+                page="About"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
 
-                    <Link
-                      page="Services"
-                      selectedPage={selectedPage}
-                      setSelectedPage={setSelectedPage}
-                    />
+              <Link
+                page="Services"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
 
-                    <Link
-                      page="Pricing"
-                      selectedPage={selectedPage}
-                      setSelectedPage={setSelectedPage}
-                    />
+              <Link
+                page="Pricing"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
 
-                    <Link
-                      page="Reviews"
-                      selectedPage={selectedPage}
-                      setSelectedPage={setSelectedPage}
-                    />
-                    <Link
-                      page="Contact"
-                      selectedPage={selectedPage}
-                      setSelectedPage={setSelectedPage}
-                    />
+              <Link
+                page="Reviews"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              <Link
+                page="Contact"
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
             </div>
           </div>
         </div>

@@ -5,6 +5,7 @@ import Home from "./scenes/Home/Home";
 import About from "./scenes/About/About";
 import Services from "./scenes/Services/Services";
 import Testimonial from "./scenes/Testemonial/Testimonial";
+import Footer from "./scenes/Footer/Footer";
 
 const App = () => {
   const [selectedPage, setSelectedPage] = useState<SelectedPage>(
@@ -27,7 +28,7 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div className="bg-gray-100">
       <NavBar
         isTopPage={isTopPage}
         selectedPage={selectedPage}
@@ -37,6 +38,7 @@ const App = () => {
       <About setSelectedPage={setSelectedPage} />
       <Services setSelectedPage={setSelectedPage} children={undefined} />
       <Testimonial setSelectedPage={setSelectedPage} />
+      <Footer setSelectedPage={setSelectedPage}/>
     </div>
   );
 };

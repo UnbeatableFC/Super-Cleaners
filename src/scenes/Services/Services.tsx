@@ -78,7 +78,7 @@ const Services = ({ setSelectedPage }: Props) => {
   const services: Array<ServiceTabType> = [
     {
       image: MattressCleaning,
-      title: "Mattress Cleaning",
+      title: "Carpet Cleaning",
     },
     {
       image: MattressCleaning,
@@ -103,7 +103,7 @@ const Services = ({ setSelectedPage }: Props) => {
   ];
 
   return (
-    <section id="services" className=" py-1">
+    <section id="services" className=" bg-white py-1">
       {/* Choose Tab */}
       <div className=" bg-gray-400/5 py-1">
         <motion.div
@@ -116,7 +116,7 @@ const Services = ({ setSelectedPage }: Props) => {
             </h2>
           </div>
           <motion.div
-            className="md:flex items-center justify-center gap-8 mt-5"
+            className="flex md:flex-row flex-col sm:flex-wrap sm:flex-row md:flex-nowrap items-center justify-center gap-8 mt-5"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.5 }}
@@ -149,11 +149,13 @@ const Services = ({ setSelectedPage }: Props) => {
           }}
         >
           <div className="flex justify-center items-center mb-8">
-            <h2 className="text-xl md:text-3xl font-bold">Cleaning Services</h2>
+            <h2 className="text-2xl md:text-3xl font-bold">
+              Cleaning Services
+            </h2>
           </div>
 
           <div className="w-5/6 mx-auto">
-            <ul className="grid grid-cols-3 gap-6 mx-auto">
+            <ul className="flex flex-wrap md:grid md:grid-cols-3 md:gap-6 mx-auto">
               {services.map((item: ServiceTabType, index) => (
                 <ServiceTab
                   key={`${item.title} - ${index}`}
@@ -172,10 +174,14 @@ const Services = ({ setSelectedPage }: Props) => {
       </div>
 
       {/* Growth Flex */}
-      <div id="pricing" className="flex justify-center items-center mt-20 w-5/6 mx-auto bg-blue-700 rounded-[45px]">
+      <motion.div
+        id="pricing"
+        onViewportEnter={() => setSelectedPage(SelectedPage.Pricing)}
+        className="flex md:flex-row flex-col justify-center items-center mt-10 md:mt-20 w-5/6 mx-auto bg-blue-700 py-3 px-3 rounded-md md:rounded-[45px]"
+      >
         {/* Four In One */}
         <div className="flex basis-3/4 flex-wrap gap-6 mx-auto py-14">
-          <ul className="grid grid-cols-2 gap-6 mx-auto">
+          <ul className="sm:grid sm:grid-cols-2 flex flex-col gap-6 mx-auto">
             {growths.map((growth: ServiceType) => (
               <GrowthTab
                 key={growth.title}
@@ -187,11 +193,11 @@ const Services = ({ setSelectedPage }: Props) => {
           </ul>
         </div>
         {/* Growth Text */}
-        <div className="flex basis-2/5 flex-col items-start justify-start mr-12 -ml-10">
-          <h2 className="md:text-3xl text-2xl font-semibold">
+        <div className="flex md:basis-2/5 flex-col items-center md:items-start md:justify-start md:mr-12 md:-ml-10">
+          <h2 className="md:text-3xl md:text-start text-center text-[28px] font-semibold">
             We are the Fastest Growing Cleaning Company
           </h2>
-          <p className="text-sm py-4 mb-3">
+          <p className="text-sm md:text-start text-center py-4 mb-3">
             With a commitment to excellence and a passion for cleanliness, we
             have rapidly expanded our services and client base. Our dedication
             to providing top-quality cleaning solutions has earned us a
@@ -203,12 +209,15 @@ const Services = ({ setSelectedPage }: Props) => {
             View Services
           </ActionButton>
         </div>
-      </div>
+      </motion.div>
 
       {/* Easier Cleaning */}
-      <div className="flex w-5/6 mt-24 mx-auto items-center justify-evenly ">
+      <motion.div
+        onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
+        className="flex md:flex-row flex-col w-5/6 mt-12 md:mt-24 mx-auto items-center justify-evenly "
+      >
         {/* Text */}
-        <div className="flex basis-2/5 flex-col gap-3 items-start justify-center my-auto  ">
+        <div className="flex basis-2/5 flex-col md:gap-3 gap-4 items-center md:items-start justify-center my-auto  ">
           <h2 className="text-3xl font-bold">
             We Make Cleaning Easier and More Convenient{" "}
           </h2>
@@ -220,7 +229,7 @@ const Services = ({ setSelectedPage }: Props) => {
             one-time deep clean or regular maintenance, we have the expertise
             and resources to meet your needs.
           </p>
-          <p className="text-sm">
+          <p className="hidden sm:block text-sm">
             We offer a wide range of cleaning services tailored to suit your
             specific requirements. Our flexible scheduling options and
             competitive pricing make it easy for you to maintain a clean and
@@ -235,7 +244,7 @@ const Services = ({ setSelectedPage }: Props) => {
         <div className="flex basis-3/5 items-center justify-center">
           <img className="object-contain" src={ServiceMan} alt="serviceman" />
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

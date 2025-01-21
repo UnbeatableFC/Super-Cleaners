@@ -55,7 +55,7 @@ const Testimonial = ({ setSelectedPage }: Props) => {
   return (
     <section id="reviews" className="w-5/6 bg-gray-50 mb-10 py-5 mt-36 mx-auto">
       <motion.div
-        onViewportEnter={() => setSelectedPage(SelectedPage.Services)}
+        onViewportEnter={() => setSelectedPage(SelectedPage.Reviews)}
         className="flex flex-col items-center justify-center mx-auto "
         initial="hidden"
         whileInView="visible"
@@ -63,10 +63,12 @@ const Testimonial = ({ setSelectedPage }: Props) => {
         variants={container}
       >
         <div className="flex items-center justify-center pb-8">
-          <h1 className="text-4xl text-center">What our customer says</h1>
+          <h1 className="md:text-4xl text-3xl text-center">
+            What our customer says
+          </h1>
         </div>
 
-        <motion.div className="grid grid-cols-3 mx-auto w-4/5">
+        <motion.div className="flex flex-col sm:flex-row items-center md:grid md:grid-cols-3 mx-auto justify-center md:w-4/5">
           {testimon.map((testimon: TestType) => (
             <Test
               key={testimon.name}
@@ -78,7 +80,7 @@ const Testimonial = ({ setSelectedPage }: Props) => {
           ))}
         </motion.div>
 
-        <div className="flex gap-4 mt-10">
+        <div className="hidden md:flex gap-4 mt-10">
           <button title="previous">
             <ArrowLeftIcon className="bg-blue-300 w-12 p-4 text-white rounded-full hover:bg-blue-600 transition duration-300" />
           </button>
@@ -86,9 +88,14 @@ const Testimonial = ({ setSelectedPage }: Props) => {
             <ArrowRightIcon className="bg-blue-300 w-12 p-4 text-white rounded-full hover:bg-blue-600 transition duration-300" />
           </button>
         </div>
+        <div className="flex items-center mt-4 md:hidden">
+          <button className="bg-blue-300 p-2 text-white rounded-full hover:bg-blue-600 transition duration-300">
+            More Reviews
+          </button>
+        </div>
       </motion.div>
 
-      <div className="overflow-hidden w-full h-16 mt-12 bg-blue-400 py-16 flex items-center">
+      <div className="overflow-hidden w-full h-16 mt-12 bg-blue-400 py-8 md:py-16 flex items-center">
         <motion.div
           className="flex gap-3 whitespace-nowrap text-xl font-bold"
           animate={{ x: ["0%", "-100%"] }}
