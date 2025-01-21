@@ -25,7 +25,7 @@ const Footer = ({ setSelectedPage }: Props) => {
     >
       <motion.div
         onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}
-        className="flex border-b-2 border-gray-200 pb-5 flex-col gap-3 sm:grid sm:grid-cols-2 md:grid md:grid-cols-4"
+        className="flex border-b-2 border-gray-200 pb-5 flex-col gap-10 sm:grid sm:grid-cols-2 md:grid md:grid-cols-4"
       >
         <div className="flex flex-col gap-3 ">
           <p className="text-3xl text-nowrap text-bluelogo-500 font-bold">
