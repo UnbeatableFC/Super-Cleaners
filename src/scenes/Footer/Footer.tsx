@@ -62,102 +62,106 @@ const Footer = ({ setSelectedPage }: Props) => {
           <h3 className="text-xl text-center sm:text-start md:text-center  md:text-lg font-bold">
             Services
           </h3>
-          <div className="flex sm:flex-col justify-between flex-row gap-3">
-            <a
-              className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
-              href="#services"
-              onClick={() => setSelectedPage(SelectedPage.Services)}
-            >
-              Carpet Cleaning
-            </a>
-            <a
-              className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
-              href="#services"
-              onClick={() => setSelectedPage(SelectedPage.Services)}
-            >
-              Mattress Cleaning
-            </a>
-            <a
-              className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
-              href="#services"
-              onClick={() => setSelectedPage(SelectedPage.Services)}
-            >
-              Oven Cleaning
-            </a>
-          </div>
-          <div className="flex md:flex-col sm:flex-col sm:gap-3 justify-between flex-row gap-1">
-            <a
-              className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
-              href="#services"
-              onClick={() => setSelectedPage(SelectedPage.Services)}
-            >
-              Window Cleaning
-            </a>
-            <a
-              className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
-              href="#services"
-              onClick={() => setSelectedPage(SelectedPage.Services)}
-            >
-              End of Tenancy Cleaning
-            </a>
-            <a
-              className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
-              href="#services"
-              onClick={() => setSelectedPage(SelectedPage.Services)}
-            >
-              Upholstery Cleaning
-            </a>
+          <div className="grid grid-cols-2 sm:flex sm:flex-col gap-3">
+            <div className="flex sm:flex-col justify-between flex-col gap-3">
+              <a
+                className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
+                href="#services"
+                onClick={() => setSelectedPage(SelectedPage.Services)}
+              >
+                Carpet Cleaning
+              </a>
+              <a
+                className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
+                href="#services"
+                onClick={() => setSelectedPage(SelectedPage.Services)}
+              >
+                Mattress Cleaning
+              </a>
+              <a
+                className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
+                href="#services"
+                onClick={() => setSelectedPage(SelectedPage.Services)}
+              >
+                Oven Cleaning
+              </a>
+            </div>
+            <div className="flex md:flex-col sm:flex-col sm:gap-3 justify-between flex-col gap-3">
+              <a
+                className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
+                href="#services"
+                onClick={() => setSelectedPage(SelectedPage.Services)}
+              >
+                Window Cleaning
+              </a>
+              <a
+                className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
+                href="#services"
+                onClick={() => setSelectedPage(SelectedPage.Services)}
+              >
+                End of Tenancy Cleaning
+              </a>
+              <a
+                className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
+                href="#services"
+                onClick={() => setSelectedPage(SelectedPage.Services)}
+              >
+                Upholstery Cleaning
+              </a>
+            </div>
           </div>
         </div>
         <div className="flex flex-col gap-2 sm:items-start justify-center items-center">
           <h3 className="text-xl text-center sm:text-start md:text-center  md:text-lg font-bold">
             Help & Information
           </h3>
-          <div className="flex md:flex-col justify-between flex-row sm:flex-col  sm:gap-3 gap-7">
-            <a
-              className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
-              href="#about"
-              onClick={() => setSelectedPage(SelectedPage.About)}
-            >
-              About Us
-            </a>
-            <a
-              className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
-              href="#pricing"
-              onClick={() => setSelectedPage(SelectedPage.Pricing)}
-            >
-              Pricing
-            </a>
-            <a
-              className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
-              href="#reviews"
-              onClick={() => setSelectedPage(SelectedPage.Reviews)}
-            >
-              Client Reviews
-            </a>
-          </div>
-          <div className="flex md:flex-col justify-between flex-row gap-5 sm:flex-col sm:gap-3 ">
-            <a
-              className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
-              href="#services"
-              onClick={() => setSelectedPage(SelectedPage.Services)}
-            >
-              Blog
-            </a>
-            <a
-              className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
-              href="#about"
-              onClick={() => setSelectedPage(SelectedPage.About)}
-            >
-              Privacy Policy
-            </a>
-            <a
-              className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
-              href="#services"
-              onClick={() => setSelectedPage(SelectedPage.Services)}
-            >
-              Terms Of Service
-            </a>
+          <div className="grid grid-cols-2 sm:flex sm:flex-col gap-3">
+            <div className="flex md:flex-col justify-between flex-col sm:flex-col  sm:gap-3 gap-3">
+              <a
+                className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
+                href="#about"
+                onClick={() => setSelectedPage(SelectedPage.About)}
+              >
+                About Us
+              </a>
+              <a
+                className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
+                href="#pricing"
+                onClick={() => setSelectedPage(SelectedPage.Pricing)}
+              >
+                Pricing
+              </a>
+              <a
+                className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
+                href="#reviews"
+                onClick={() => setSelectedPage(SelectedPage.Reviews)}
+              >
+                Client Reviews
+              </a>
+            </div>
+            <div className="flex md:flex-col justify-between flex-col gap-5 sm:flex-col sm:gap-3 ">
+              <a
+                className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
+                href="#services"
+                onClick={() => setSelectedPage(SelectedPage.Services)}
+              >
+                Blog
+              </a>
+              <a
+                className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
+                href="#about"
+                onClick={() => setSelectedPage(SelectedPage.About)}
+              >
+                Privacy Policy
+              </a>
+              <a
+                className="text-gray-500 text-sm hover:text-blue-500 transition duration-300"
+                href="#services"
+                onClick={() => setSelectedPage(SelectedPage.Services)}
+              >
+                Terms Of Service
+              </a>
+            </div>
           </div>
         </div>
         <div className="flex flex-col items-center sm:justify-center md:justify-start md:items-start gap-3 md:gap-4">
