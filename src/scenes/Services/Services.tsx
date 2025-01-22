@@ -119,7 +119,7 @@ const Services = ({ setSelectedPage }: Props) => {
             className="flex md:flex-row flex-col sm:flex-wrap sm:flex-row md:flex-nowrap items-center justify-center gap-8 mt-5"
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: true, amount: 0.5 }}
+            viewport={{ once: true, amount: 0.2 }}
             variants={container}
           >
             {choose.map((choose: ServiceType) => (
@@ -141,7 +141,7 @@ const Services = ({ setSelectedPage }: Props) => {
           className="mx-auto flex flex-col w-5/6 mt-24 py-14"
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
+          viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.5 }}
           variants={{
             hidden: { opacity: 0, x: -50 },
